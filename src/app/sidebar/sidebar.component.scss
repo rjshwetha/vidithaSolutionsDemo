@@ -1,0 +1,41 @@
+.sideBarContainer{
+    background-color: aquamarine;
+    height: auto;
+}
+.main-box{
+    height: 650px;
+    background-color:rgb(141, 173, 173);
+    width: 65px;
+}
+.main-box:hover{
+    width: 215px;
+    transition: 0.3s;
+}
+.menu-items{
+    line-height:60px;
+    list-style: none;
+    padding-left: 0px;
+    height: 100%;
+    
+}
+.menu-items li{
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 25px;
+    cursor: pointer;
+    display: flex;
+    overflow: hidden;
+}
+.menu-items li i{
+    margin-left: 25px;
+    font-size: 20px;
+    margin: 0px 25px 0px 0px;
+    position: relative;
+    top: 15px;
+    width: 30px;
+}
+.menu-items li:hover{
+    background-color: rgb(190, 184, 184);
+    color: rgb(97, 155, 207);
+    
+}

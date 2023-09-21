@@ -1,0 +1,66 @@
+
+<div class="inputBox"> 
+    <select #ref (change)="getSelectedValue(ref.value)">  
+        <option disabled>Select Website</option>  
+        <option>Choose Website</option>  
+        <option value="createUser">createUser</option>
+        <option value="updateUser">updateUser</option> 
+        <option value="deleteUser">deleteUser</option> 
+        <option value="getAllUser">getAllUser</option>   
+    </select>  
+    <!-- <select type="text" [(ngModel)]="phonenumber" required> <i>Phone Number</i>  -->
+ </div> 
+    <!-- <app-sidebar></app-sidebar> -->
+    <!-- <ng-template sidenavContentArea></ng-template> -->
+<div class="workarea" style="width: 75px;">
+<section>
+    
+<div class="signin" *ngIf="createUser"> 
+    <div class="content"> 
+     <h2>Enter Details of the user</h2> 
+     <div class="form"> 
+      <div class="inputBox"> 
+       <input type="text" [(ngModel)]="userName"
+        required> <i>Username</i> 
+      </div> 
+      <div class="inputBox"> 
+       <input type="text" [(ngModel)]="phonenumber" required> <i>Phone Number</i> 
+      </div> 
+      <div class="inputBox"> 
+        <input type="text" [(ngModel)]="email" required> <i>Email Id</i> 
+       </div> 
+      <div class="inputBox"> 
+        <button type="submit" (click)="onClickSave()">Submit</button>
+        <button (click)="onClickBack()">Back</button>
+        <a (click)="onClickGetAllUsers()">View all users</a>
+      </div> 
+
+     </div> 
+
+    </div> 
+
+   </div> 
+   
+</section>
+<div class="tabel">
+    <div *ngIf="getAllUser" >
+        <tr>
+                <th>UserName</th>
+                <th>Phone Number</th>
+                <th>Email Id</th>
+        </tr>
+        <tr *ngFor="let data of userDetails">
+            <td>{{data.userName}}</td>
+            <td>{{data.phonenumber}}</td>
+            <td>{{data.email}}</td>
+        </tr>
+
+    </div>
+</div>
+
+<div *ngIf="deleteUser">aaaaaaaaaaaaaaaaaaaaaaaa</div>
+
+<div *ngIf="updateUser">bbbbbbbbbbbbbbbbbbbbbbbb</div>
+
+
+</div>

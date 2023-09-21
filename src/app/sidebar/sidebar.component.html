@@ -1,0 +1,19 @@
+<section class="app-component">
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="main-box">
+            <div class="side-menu-list">
+                <ul class="menu-items">
+                    <h3 class="w3-bar-item">Menu</h3>
+                    <!-- <app-create-user [userTask]="updateUser"></app-create-user> -->
+                    <li (click)="goto('createUser')"><i class="fa fa-user-plus" ></i>Create-user</li>
+                    <li (click)="goto('updateUser')"><i class="fa fa-add" ></i>Update-user</li>
+                    <li (click)="goto('deleteUser')"><i class="fa fa-trash"></i>Delete-user</li>
+                    <li (click)="goto('getAllUser')"><i class="fa fa-user-plus" ></i>Get asll user</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+ 
